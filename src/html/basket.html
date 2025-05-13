@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta configuration for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title shown in browser tab -->
+    <title>Shopping Basket | Fennec FC</title>
+
+    <!-- Link to the CSS file that styles this page -->
+    <link rel="stylesheet" href="../css/basket.css">
+</head>
+
+<body>
+    <!-- Hero section at the top of the page for visual emphasis -->
+    <section class="hero-section">
+        <div class="overlay">
+            <h1>Your Basket</h1>
+            <p>Review and manage your selected items.</p>
+        </div>
+    </section>
+
+    <!-- Main container for basket contents -->
+    <section class="basket-page-container">
+        <div class="basket-content">
+            <!-- Section title -->
+            <h2 class="section-title">Shopping Basket</h2>
+
+            <!-- Container where JavaScript will inject the basket items -->
+            <div id="basket-items-container">
+                <!-- Placeholder message shown while items are being loaded -->
+                <p class="empty-basket-message">Loading your basket...</p>
+            </div>
+
+            <!-- Summary section showing total cost and checkout controls -->
+            <div class="basket-summary">
+                <div class="basket-total">
+                    <!-- Label and dynamic total value -->
+                    <h3>Total:</h3>
+                    <p id="basket-total-amount">$0.00</p>
+                </div>
+
+                <!-- Action buttons for continuing shopping or checking out -->
+                <div class="basket-actions">
+                    <a href="../html/merchandise.html" class="btn-secondary">Continue Shopping</a>
+                    <button id="checkout-button" class="btn-primary">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container for toast-style notifications (e.g. item removed) -->
+    <div id="toast-container"></div>
+    
+    <!-- JavaScript file that handles all basket logic -->
+    <script src="../js/basket.js"></script>
+</body>
+
+</html>

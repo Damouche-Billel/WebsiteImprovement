@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set character encoding and responsive behavior -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title shown in browser tab -->
+    <title>Merchandise | Fennec FC</title>
+
+    <!-- External stylesheet for basket and page styles -->
+    <link rel="stylesheet" href="../css/basket.css">
+</head>
+
+<body>
+    <!-- Hero section at the top to introduce the merchandise -->
+    <section class="hero-section">
+        <div class="overlay">
+            <h1>Official Merchandise</h1>
+            <p>Support Fennec FC with exclusive gear and apparel.</p>
+        </div>
+    </section>
+
+    <!-- Grid layout for product cards -->
+    <section class="grid">
+        <!-- Product Card: Shirt -->
+        <div class="card">
+            <img src="../../data/images/fennec-shirt.jpg" alt="Fennec FC Shirt">
+            <div class="card-content">
+                <h3>Fennec FC Shirt</h3>
+                <p>$25.00</p>
+                <!-- Button adds the shirt to basket using JavaScript -->
+                <button class="btn-primary" onclick="addToBasket('Fennec FC Shirt', 25.00, 'https://via.placeholder.com/300x200/1c1c1c/d4b24b?text=Fennec+FC+Shirt')">Add to Basket</button>
+            </div>
+        </div>
+
+        <!-- Product Card: Scarf -->
+        <div class="card">
+            <img src="../../data/images/fennec-scarf.jpg" alt="Fennec FC Scarf">
+            <div class="card-content">
+                <h3>Fennec FC Scarf</h3>
+                <p>$15.00</p>
+                <!-- Button adds the scarf to basket using JavaScript -->
+                <button class="btn-primary" onclick="addToBasket('Fennec FC Scarf', 15.00, 'https://via.placeholder.com/300x200/1c1c1c/d4b24b?text=Fennec+FC+Scarf')">Add to Basket</button>
+            </div>
+        </div>
+
+        <!-- Product Card: Cap -->
+        <div class="card">
+            <img src="../../data/images/fennec-cap.jpg" alt="Fennec FC Cap">
+            <div class="card-content">
+                <h3>Fennec FC Cap</h3>
+                <p>$20.00</p>
+                <!-- Button adds the cap to basket using JavaScript -->
+                <button class="btn-primary" onclick="addToBasket('Fennec FC Cap', 20.00, 'https://via.placeholder.com/300x200/1c1c1c/d4b24b?text=Fennec+FC+Cap')">Add to Basket</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basket section below the product cards -->
+    <section class="bg-2 basket-container">
+        <!-- Title for the basket summary -->
+        <h2 class="leading-text centre style-2">Your Basket</h2>
+
+        <!-- Dynamic area where basket contents will appear -->
+        <div id="basket"></div>
+
+        <!-- Checkout button triggers checkout logic -->
+        <button class="btn-primary" onclick="checkout()">Checkout</button>
+    </section>
+
+    <!-- Toast notifications appear here -->
+    <div id="toast-container"></div>
+
+    <!-- Load JavaScript file that controls basket logic -->
+    <script src="../js/basket.js"></script>
+</body>
+
+</html>
